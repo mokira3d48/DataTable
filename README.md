@@ -49,6 +49,9 @@ def main():
     table.append({"col1": 22, 'col3': "Lina"})
     print(table)
 
+    print({"col1": 12} in table)
+    print({"col200": "No way"} in table)
+    # print(1000 in table) Not supported yet
 
 if __name__ == '__main__':
     main()
@@ -60,6 +63,9 @@ if __name__ == '__main__':
      12    None     Oky
    None Foreach    Lina
      22    None    Lina
+
+True
+False
 
 ```
 

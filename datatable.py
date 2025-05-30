@@ -66,13 +66,25 @@ class DataTable(list):
         super().__setitem__(index, new_row)
 
     def __str__(self):
-        string = ' '.join(
+        string = '\t'.join(
             [("{name:>" + str(self.max_str_length) + "s}").format(name=name)
              for name in self.columns])
         string += "\n"
         for row in self:
-            string += ' '.join([
+            string += '\t'.join([
                 ("{v:>" + str(self.max_str_length) + "s}").format(v=str(col))
                 for col in row])
             string += "\n"
         return string
+
+    def __contains__(self, query):
+        is_exists = False
+        for col_name, value in query.items():
+            if col_name not in self.columns:
+                return False
+            col_id = self.columns.index(col_name)
+            for row in self:
+                is_exists = value == row[col_id]
+                if is_exists:
+                    break
+        return is_exists
