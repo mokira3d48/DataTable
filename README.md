@@ -8,11 +8,8 @@ Cloneable referential to get an implementation of DataTable with the best practi
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
-  - [For Linux](#for-linux)
-  - [For Windows](#for-windows)
 - [Usage](#uage)
 - [Features](#features)
-- [Tests](#tests)
 - [To contribute](#to-contribute)
 - [Licence](#licence)
 - [Contact](#contact)
