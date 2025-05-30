@@ -55,6 +55,14 @@ if __name__ == '__main__':
 
 ```
 
+```
+   col1    col2    col3
+     12    None     Oky
+   None Foreach    Lina
+     22    None    Lina
+
+```
+
 ## Features
 
 - Add new row.

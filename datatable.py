@@ -66,5 +66,13 @@ class DataTable(list):
         super().__setitem__(index, new_row)
 
     def __str__(self):
-        string = ' '.join(f"{name:{self.max_str_length}}"
-                          for name in self.columns)
+        string = ' '.join(
+            [("{name:>" + str(self.max_str_length) + "s}").format(name=name)
+             for name in self.columns])
+        string += "\n"
+        for row in self:
+            string += ' '.join([
+                ("{v:>" + str(self.max_str_length) + "s}").format(v=str(col))
+                for col in row])
+            string += "\n"
+        return string
